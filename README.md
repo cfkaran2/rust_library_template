@@ -12,11 +12,11 @@ governs this project. All contributions are accepted under the terms of the
 
 # Contributing
 
-Pull requests are welcome. A complete description of the process is given in the
-[`CONTRIBUTING.md`](./CONTRIBUTING.md) file that can be found in the directory
-this [`README.md`](./README.md) file lives within.
+Pull requests are welcome. A complete description of the process is given in
+the [`CONTRIBUTING.md`](./CONTRIBUTING.md) file that can be found in the
+directory this [`README.md`](./README.md) file lives within.
 
 # Credits
 
-This project's [code of conduct](./CODE_OF_CONDUCT.md) was copied directly from
-the [Contributor Code of Conduct](https://www.contributor-covenant.org).
+This project's [code of conduct](./CODE_OF_CONDUCT.md) was copied directly
+from the [Contributor Code of Conduct](https://www.contributor-covenant.org).

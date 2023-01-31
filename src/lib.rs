@@ -216,14 +216,14 @@ pub mod error;
 /// ## Panics (optional)
 ///
 /// If this function can panic via the 'panic!()' or 'abort!()' macros, the
-/// causes *must* be described here, along with how to avoid causing a panic or
-/// abort.  Note that certain types of panics and aborts are outside of the
-/// control of the function and do not need to be described here.  As an
+/// causes *must* be described here, along with how to avoid causing a panic
+/// or abort.  Note that certain types of panics and aborts are outside of
+/// the control of the function and do not need to be described here.  As an
 /// example, it is impossible to know if a process will run out of memory
 /// during an allocation because that requires knowledge of what other
 /// processes are planning on doing concurrent to this process.  As a rule of
-/// thumb, if this function calls `panic!()` or `abort!()` directly, it must be
-/// documented. Otherwise, use your best judgement.
+/// thumb, if this function calls `panic!()` or `abort!()` directly, it must
+/// be documented. Otherwise, use your best judgement.
 ///
 /// ## Parameters
 ///
@@ -231,38 +231,25 @@ pub mod error;
 /// general, this should be in the form of a list, similar to the following:
 ///
 /// - `arg` - A description of `arg`.  You do not need to detail what the type
-///   is as the compiler will fill that in for you, but you must describe what
-///   it is for.  Most importantly, if there are values that can be passed in
-///   that are not allowed, you **must** describe them here.  For example, if
-///   `arg` must be in the range `[0, 10]` or a panic can occur, then you
-///   **must** provide a warning about that here, as well as provide the warning
-///   in the `Panics` section above.
+///   is as the compiler will fill that in for you, but you must describe
+///   what it is for.  Most importantly, if there are values that can be
+///   passed in that are not allowed, you **must** describe them here.  For
+///   example, if `arg` must be in the range `[0, 10]` or a panic can occur,
+///   then you **must** provide a warning about that here, as well as provide
+///   the warning in the `Panics` section above.
 /// - `next_arg` - The next argument in the list
 /// - `and_so_forth`
 ///
 /// ## Returns
 ///
 /// Provide a complete description of what is returned.  The type information
-/// will be picked up by the compiler, but how and why a particular instance is
-/// returned is not always obvious from the return type, which is why
+/// will be picked up by the compiler, but how and why a particular instance
+/// is returned is not always obvious from the return type, which is why
 /// you **must** explain it here.  In particular, if you return a `Result`,
 /// always detail what types of errors may be returned by this function.
 ///
-/// The only case where you don't need the `Returns` section is if nothing (AKA,
-/// the `unit` type, `()`) is returned.
-///
-/// For the function below, we might have documentation similar to the
-/// following:
-///    If this function operates correctly, it will return the additive inverse
-///    of `arg` in the `Ok()` variant.  The additive inverse is the value that
-///    makes `(arg + x) % 256 == 0` true (where `x` is the additive inverse).
-///
-///    This function makes a remote procedure call (RPC) under the hood to a
-///    service that may or may not be available at the time of the call.  If
-///    the service isn't available (or it has some other kind of error), then
-///    the appropriate \[`FooError`\] type will be returned in the
-///    `Err()` variant. Read the documentation for \[`FooError`\] for more
-///    information on what kinds of errors you might need to deal with.
+/// The only case where you don't need the `Returns` section is if nothing
+/// (AKA, the `unit` type, `()`) is returned.
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
