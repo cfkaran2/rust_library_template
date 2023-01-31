@@ -416,9 +416,18 @@ needed, safety conditions.  For example:
 /// ## Safety (optional)
 ///
 /// This section is optional, but *must* be in place if this function can lead
-/// to unsafety.  All conditions that can lead to unsafety *must* be described.
-/// How to avoid unsafe behavior when calling the function *must* also be
-/// described.
+/// to unsafety.  All conditions that can lead to unsafety *must* be
+/// described. How to avoid unsafe behavior when calling the function *must*
+/// also be described.
+///
+/// Note that merely using an [`unsafe`] block within your code is not enough
+/// to warrant having this section; there must be some way of calling this
+/// code that leads to undefined or otherwise unsafe behavior.  So, if your
+/// code wraps an [`unsafe`] block such that it guarantees that unsafe
+/// behavior can never occur, then you don't need this section.  For this to
+/// be true though, you **must** ensure that there does not exist **any**
+/// code path that can result in unsafe behavior occurring. If you can't do
+/// that, then you need this section.
 ///
 /// ## Panics (optional)
 ///
