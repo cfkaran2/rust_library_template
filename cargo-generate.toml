@@ -1,0 +1,3 @@
+[placeholders.description]
+type = "string"
+prompt = "Please provide a short description of your project"

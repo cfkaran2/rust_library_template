@@ -1,0 +1,21 @@
+# See more keys and their definitions at
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2021"
+authors = ["{{authors}}"]
+description = "{{description}}"
+readme = "README.md"
+license-file = "LICENSE.txt"
+keywords = []
+categories = []
+publish = false
+
+[dependencies]
+semver = { version = "^1.0" }
+thiserror = { version = "^1.0" }
+
+[dev-dependencies]
+
